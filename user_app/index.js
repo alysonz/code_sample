@@ -8,7 +8,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import activityInitializer from './initializers/activity';
 import amplitudeInitializer from './initializers/amplitude';
 
-import ConnectedPersonalInfo from './pages/personal_info_page';
+import ConnectedPersonalInfo from './personal_info_page';
 
 import store from './store';
 import brand from './lib/brand';

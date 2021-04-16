@@ -113,12 +113,6 @@ class PersonalInfo extends Page {
             backButtonOnClick={() => this.props.router.goBack()}
             headerNode="About Me"
           />
-          <div style={baseStyles.user}>
-            <div style={baseStyles.primaryText}>
-              {this.props.personalInfo.first_name}<br />
-              {this.props.personalInfo.last_name}
-            </div>
-          </div>
           <BasicInfo
             personalInfo={personalInfo}
             onChangeFirst={this.handleChangeFirst}

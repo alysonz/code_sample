@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from 'material-ui/MenuItem';
-import SelectField from 'material-ui/SelectField';
-import Table from 'material-ui/Table';
-import TableBody from 'material-ui/Table/TableBody';
-import TableRow from 'material-ui/Table/TableRow';
-import TableRowColumn from 'material-ui/Table/TableRowColumn';
-import TextField from 'material-ui/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
+import SelectField from '@material-ui/core/SelectField';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/Table/TableBody';
+import TableRow from '@material-ui/core/Table/TableRow';
+import TableRowColumn from '@material-ui/core/Table/TableRowColumn';
+import TextField from '@material-ui/core/TextField';
 import { KeypadDate } from 'common-ui';
 
 import { colors } from '../lib/styles';
@@ -51,7 +51,7 @@ class BasicInfo extends Component {
                   floatingLabelText="First Name"
                   floatingLabelFixed={true}
                   hintStyle={baseStyles.blueText}
-                  onChange={onChangeFirst}
+                  onChange={this.props.onChangeFirst}
                   style={{ marginLeft: 15 }}
                   value={personalInfo.first_name}
                 />
@@ -64,7 +64,7 @@ class BasicInfo extends Component {
                   floatingLabelText="Last Name"
                   floatingLabelFixed={true}
                   hintStyle={baseStyles.blueText}
-                  onChange={onChangeLast}
+                  onChange={this.props.onChangeLast}
                   style={{ marginLeft: 15 }}
                   value={personalInfo.last_name}
                 />

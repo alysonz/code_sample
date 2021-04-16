@@ -1,8 +1,8 @@
 const Joi = require('@hapi/joi');
 const { omit } = require('lodash');
 
-const read = require('../handlers/personal_info_read');
-const add = require('../handlers/personal_info_add');
+const read = require('./personal_info_read');
+const add = require('./personal_info_add');
 
 const personal_info = {
   id: Joi.number(),
