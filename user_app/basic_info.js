@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import MenuItem from '@material-ui/core/MenuItem'
-import SelectField from '@material-ui/core/SelectField'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/Table/TableBody'
-import TableRow from '@material-ui/core/Table/TableRow'
-import TableRowColumn from '@material-ui/core/Table/TableRowColumn'
-import TextField from '@material-ui/core/TextField'
-import { KeypadDate } from 'common-ui'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import MenuItem from '@material-ui/core/MenuItem';
+import SelectField from '@material-ui/core/SelectField';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/Table/TableBody';
+import TableRow from '@material-ui/core/Table/TableRow';
+import TableRowColumn from '@material-ui/core/Table/TableRowColumn';
+import TextField from '@material-ui/core/TextField';
+import { KeypadDate } from 'common-ui';
 
-import { colors } from '../lib/styles'
+import { colors } from '../lib/styles';
 
 const baseStyles = {
   text: {
@@ -23,16 +23,16 @@ const baseStyles = {
   underline: {
     display: 'none',
   },
-}
+};
 
-const heights = []
+const heights = [];
 for (let i = 50; i < 108; i++) {
-  heights.push(<MenuItem value={`${i}"`} key={i} primaryText={`${i}"`} />)
+  heights.push(<MenuItem value={`${i}"`} key={i} primaryText={`${i}"`} />);
 }
 
 class BasicInfo extends Component {
   render() {
-    const { personalInfo } = this.props
+    const { personalInfo } = this.props;
     return (
       <Table selectable={false}>
         <TableBody displayRowCheckbox={false}>
@@ -97,7 +97,7 @@ class BasicInfo extends Component {
           </TableRow>
         </TableBody>
       </Table>
-    )
+    );
   }
 }
 
@@ -106,6 +106,6 @@ BasicInfo.propTypes = {
   onChangeLanguage: PropTypes.func.isRequired,
   onChangeFirst: PropTypes.func.isRequired,
   onChangeLast: PropTypes.func.isRequired,
-}
+};
 
-export default BasicInfo
+export default BasicInfo;
