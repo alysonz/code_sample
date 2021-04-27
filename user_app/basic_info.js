@@ -14,7 +14,7 @@ import { colors } from '../lib/styles';
 const baseStyles = {
   text: {
     color: colors.primaryColor,
-    fontSize: 18,
+    fontSize: 42,
   },
   font: {
     color: colors.primaryColor,
