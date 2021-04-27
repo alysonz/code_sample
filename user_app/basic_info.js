@@ -10,11 +10,11 @@ import TextField from '@material-ui/core/TextField';
 import { KeypadDate } from 'common-ui';
 
 import { colors } from '../lib/styles';
-  
+
 const baseStyles = {
   text: {
     color: colors.primaryColor,
-    fontSize: 20,
+    fontSize: 42,
   },
   font: {
     color: colors.primaryColor,
@@ -40,15 +40,18 @@ class BasicInfo extends Component {
             <TableRowColumn style={baseStyles.text}>
               Date of Birth
             </TableRowColumn>
-            <KeypadDate onChange={this.props.onChangeDob} value={personalInfo.birth_date} />
+            <KeypadDate
+              onChange={this.props.onChangeDob}
+              value={personalInfo.birth_date}
+            />
           </TableRow>
           <TableRow>
             <TableRowColumn style={baseStyles.text}>Name</TableRowColumn>
             <TableRowColumn style={baseStyles.text}>
               <div>
                 <TextField
-                  hintText="First Name"
-                  floatingLabelText="First Name"
+                  hintText='First Name'
+                  floatingLabelText='First Name'
                   floatingLabelFixed={true}
                   hintStyle={baseStyles.blueText}
                   onChange={this.props.onChangeFirst}
@@ -60,8 +63,8 @@ class BasicInfo extends Component {
             <TableRowColumn style={baseStyles.text}>
               <div>
                 <TextField
-                  hintText="Last Name"
-                  floatingLabelText="Last Name"
+                  hintText='Last Name'
+                  floatingLabelText='Last Name'
                   floatingLabelFixed={true}
                   hintStyle={baseStyles.blueText}
                   onChange={this.props.onChangeLast}
@@ -72,20 +75,22 @@ class BasicInfo extends Component {
             </TableRowColumn>
           </TableRow>
           <TableRow>
-            <TableRowColumn style={baseStyles.text}>Primary Language</TableRowColumn>
+            <TableRowColumn style={baseStyles.text}>
+              Primary Language
+            </TableRowColumn>
             <TableRowColumn style={baseStyles.text}>
               <div>
                 <SelectField
-                  floatingLabelText="Select Primary Language"
+                  floatingLabelText='Select Primary Language'
                   value={personalInfo.primary_language}
                   onChange={this.props.onChangeLanguage}
                   underlineStyle={baseStyles.underline}
                   style={baseStyles.text}
                 >
-                  <MenuItem value="English" primaryText="English" />
-                  <MenuItem value="Spanish" primaryText="Spanish" />
-                  <MenuItem value="French" primaryText="French" />
-                  <MenuItem value="Other" primaryText="Other" />
+                  <MenuItem value='English' primaryText='English' />
+                  <MenuItem value='Spanish' primaryText='Spanish' />
+                  <MenuItem value='French' primaryText='French' />
+                  <MenuItem value='Other' primaryText='Other' />
                 </SelectField>
               </div>
             </TableRowColumn>
@@ -95,11 +100,6 @@ class BasicInfo extends Component {
     );
   }
 }
- 
-BasicInfo.defaultProps = {
-  hidePhone: false,
-  hideDob: false,
-};
 
 BasicInfo.propTypes = {
   onChangeDob: PropTypes.func.isRequired,
