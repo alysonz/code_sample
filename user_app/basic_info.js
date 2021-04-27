@@ -95,7 +95,7 @@ class BasicInfo extends Component {
     );
   }
 }
-
+ 
 BasicInfo.defaultProps = {
   hidePhone: false,
   hideDob: false,
